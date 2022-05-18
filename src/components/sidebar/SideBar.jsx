@@ -31,7 +31,7 @@ function SideBar() {
 			</div>
 			<div className="sidebarItem">
 				<span className="sidebarTitle">Categories</span>
-				{/* <ul className="sidebarList">
+				<ul className="sidebarList">
 					{cat.length > 0 ? (
 						cat.map((c) => (
 							<Link to={`/?cat=${c.name}`} className="link">
@@ -41,7 +41,7 @@ function SideBar() {
 					) : (
 						<span>No Categories yet</span>
 					)}
-				</ul> */}
+				</ul>
 			</div>
 			<div className="sidebarItem">
 				<span className="sidebarTitle">Follow Us</span>
