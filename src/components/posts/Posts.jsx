@@ -20,7 +20,7 @@ function Posts({ posts }) {
 	useEffect(() => {
 		fetchMyPost();
 	}, []);
-
+	debugger;
 	return (
 		<div className="posts-page">
 			<div className="posts">
