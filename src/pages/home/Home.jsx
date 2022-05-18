@@ -13,7 +13,9 @@ function Home() {
 
 	const fetchPosts = async () => {
 		try {
-			const res = await axios.get("/posts" + search);
+			const res = await axios.get(
+				"https://blog-for-everyone-api.herokuapp.com/api/posts" + search
+			);
 
 			setPosts(res.data);
 		} catch (error) {

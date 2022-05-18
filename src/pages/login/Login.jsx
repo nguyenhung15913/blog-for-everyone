@@ -13,10 +13,13 @@ function Login() {
 		e.preventDefault();
 		dispatch({ type: "LOGIN_START" });
 		try {
-			const res = await axios.post("/auth/login", {
-				username: userRef.current.value,
-				password: passwordRef.current.value
-			});
+			const res = await axios.post(
+				"https://blog-for-everyone-api.herokuapp.com/api/auth/login",
+				{
+					username: userRef.current.value,
+					password: passwordRef.current.value
+				}
+			);
 			dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
 			console.log(res);
 		} catch (err) {
@@ -49,7 +52,10 @@ function Login() {
 				</button>
 			</form>
 			<button className="loginRegisterButton">
-				<Link className="link" to="/register">
+				<Link
+					className="link"
+					to="https://blog-for-everyone-api.herokuapp.com/api/register"
+				>
 					Register
 				</Link>
 			</button>

@@ -8,7 +8,9 @@ function SideBar() {
 	useEffect(() => {
 		const getCats = async () => {
 			try {
-				const res = await axios.get("/categories");
+				const res = await axios.get(
+					"https://blog-for-everyone-api.herokuapp.com/api/categories"
+				);
 				setCats(res.data);
 			} catch (error) {
 				console.log(error);

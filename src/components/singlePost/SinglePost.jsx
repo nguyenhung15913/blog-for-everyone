@@ -16,25 +16,33 @@ function SinglePost() {
 
 	const handleUpdate = async () => {
 		try {
-			await axios.put("/posts/" + postId, {
-				username: user.username,
-				title,
-				desc
-			});
+			await axios.put(
+				"https://blog-for-everyone-api.herokuapp.com/api/posts/" + postId,
+				{
+					username: user.username,
+					title,
+					desc
+				}
+			);
 			setUpdateMode(false);
 		} catch (error) {}
 	};
 
 	const handleClick = async () => {
 		try {
-			await axios.delete("/posts/" + postId, { username: user.username });
+			await axios.delete(
+				"https://blog-for-everyone-api.herokuapp.com/api/posts/" + postId,
+				{ username: user.username }
+			);
 			window.location.replace("/");
 		} catch (error) {}
 	};
 
 	useEffect(() => {
 		const getPost = async () => {
-			const res = await axios.get("/posts/" + postId);
+			const res = await axios.get(
+				"https://blog-for-everyone-api.herokuapp.com/api/posts/" + postId
+			);
 			setPost(res.data);
 			setTitle(res.data.title);
 			setDesc(res.data.desc);
@@ -76,7 +84,10 @@ function SinglePost() {
 				<div className="singlePostInfo">
 					<span className="singlePostAuthor">
 						Author:
-						<Link to={`/?user=${post.username}`} className="link">
+						<Link
+							to={`https://blog-for-everyone-api.herokuapp.com/api/?user=${post.username}`}
+							className="link"
+						>
 							<b>{post.username}</b>
 						</Link>
 					</span>
