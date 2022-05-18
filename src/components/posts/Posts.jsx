@@ -23,11 +23,11 @@ function Posts({ posts }) {
 	return (
 		<div className="posts-page">
 			<div className="posts">
-				{posts.length > 0 ? (
+				{/* {posts.length > 0 ? (
 					posts.map((post) => <Post post={post} />)
 				) : (
 					<div>No posts yet</div>
-				)}
+				)} */}
 			</div>
 			<h1>My Blog Posts from Dev.to</h1>
 			<div className="posts">
