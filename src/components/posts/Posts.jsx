@@ -20,11 +20,10 @@ function Posts({ posts }) {
 	useEffect(() => {
 		fetchMyPost();
 	}, []);
-	debugger;
 	return (
 		<div className="posts-page">
 			<div className="posts">
-				{posts ? (
+				{posts.length > 0 ? (
 					posts.map((post) => <Post post={post} />)
 				) : (
 					<div>No posts yet</div>
