@@ -2,7 +2,6 @@ import "./Post.css";
 import { Link } from "react-router-dom";
 
 function MyPost({ post }) {
-	console.log(post);
 	return (
 		<div className="post">
 			{
