@@ -10,7 +10,6 @@ function Posts({ posts }) {
 			const res = await axios.get(
 				"https://dev.to/api/articles?username=nguyenhung15913"
 			);
-			console.log(res.data);
 			setMyPosts(res.data);
 		} catch (error) {
 			console.log(error);

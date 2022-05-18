@@ -7,8 +7,12 @@ function SideBar() {
 	const [cat, setCats] = useState([]);
 	useEffect(() => {
 		const getCats = async () => {
-			const res = await axios.get("/categories");
-			setCats(res.data);
+			try {
+				const res = await axios.get("/categories");
+				setCats(res.data);
+			} catch (error) {
+				console.log(error);
+			}
 		};
 		getCats();
 	}, []);
@@ -28,7 +32,7 @@ function SideBar() {
 			<div className="sidebarItem">
 				<span className="sidebarTitle">Categories</span>
 				<ul className="sidebarList">
-					{cat?.map((c) => (
+					{cat.map((c) => (
 						<Link to={`/?cat=${c.name}`} className="link">
 							<li className="sidebarListItem">{c.name}</li>
 						</Link>

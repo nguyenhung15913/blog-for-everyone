@@ -12,9 +12,13 @@ function Home() {
 	const [posts, setPosts] = useState([]);
 
 	const fetchPosts = async () => {
-		const res = await axios.get("/posts" + search);
+		try {
+			const res = await axios.get("/posts" + search);
 
-		setPosts(res.data);
+			setPosts(res.data);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	useEffect(() => {
