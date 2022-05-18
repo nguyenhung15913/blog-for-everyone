@@ -42,6 +42,8 @@
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;
+    text-decoration: none;
+    color: rgb(35,35,35);
 }
 
 .postDate {

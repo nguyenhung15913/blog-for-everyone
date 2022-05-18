@@ -1,5 +1,4 @@
 import "./Post.css";
-import { Link } from "react-router-dom";
 
 function MyPost({ post }) {
 	return (
@@ -18,9 +17,9 @@ function MyPost({ post }) {
 						<span>{cat.name}</span>
 					))}
 				</div>
-				<Link to={`/post/${post._id}`} className="link">
-					<span className="postTitle">{post.title}</span>
-				</Link>
+				<a href={post.url} className="postTitle">
+					{post.title}
+				</a>
 
 				<hr />
 				<span className="postDate">
