@@ -1,0 +1,10 @@
+.posts-page {
+    flex: 9;
+    padding: 2rem;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
