@@ -4,7 +4,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import MyPost from "../post/MyPost";
 function Posts({ posts }) {
-	console.log(posts);
 	const [myPosts, setMyPosts] = useState([]);
 	const fetchMyPost = async () => {
 		try {
@@ -23,11 +22,11 @@ function Posts({ posts }) {
 	return (
 		<div className="posts-page">
 			<div className="posts">
-				{/* {posts.length > 0 ? (
+				{posts.length > 0 ? (
 					posts.map((post) => <Post post={post} />)
 				) : (
 					<div>No posts yet</div>
-				)} */}
+				)}
 			</div>
 			<h1>My Blog Posts from Dev.to</h1>
 			<div className="posts">
